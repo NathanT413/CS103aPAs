@@ -1,0 +1,19 @@
+<h1>Translate</h1>
+
+<% if (dialogue !== null) { %>
+    <h3>Prompt</h3>
+    <p><%= dialogue.prompt %></p>
+    <h3>Response</h3>
+    <p><%= dialogue.response%></p>
+    <% } else { %>
+        <p>No recent dialogue</p>
+    <% } %>
+
+<h2></h2>
+<form method="POST" action="/translate">
+    <input type="text" id="lang" name="lang" placeholder="Input Language" required>
+    <br>
+    <input type="text" id="text" name="text" placeholder="Input Text" required>
+    <br>
+    <input type="submit" value="Ask">
+</form>
