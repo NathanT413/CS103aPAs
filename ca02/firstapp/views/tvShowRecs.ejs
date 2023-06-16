@@ -1,0 +1,19 @@
+<h1>TV Show Recommendation Based on Genre</h1>
+
+<h2>Most Recent Dialogue</h2>
+
+<% if (dialogue !== null) { %>
+<h3>Prompt</h3>
+<p><%= dialogue.prompt %></p>
+<h3>Response</h3>
+<p><%= dialogue.response%></p>
+<% } else { %>
+    <p>No recent dialogue</p>
+<% } %> 
+
+<h2></h2>
+<form method="POST" action="/tvShowRecs">
+    <input type="text" id="input" name="input_genre" placeholder="Enter a Genre" required>
+    <br>
+    <input type="submit" value="Submit">
+</form>
